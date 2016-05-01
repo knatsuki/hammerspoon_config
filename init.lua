@@ -296,15 +296,15 @@ hs.hotkey.bind(hyper, 'f', function()
             f.h = screenRect.h
         elseif f.x == screenRect.x + math.floor(screenRect.w / 3) and f.y == screenRect.y and f.w == math.floor(screenRect.w / 3) and f.h == screenRect.h  then
             f.x = math.floor(screenRect.x + (screenRect.w - secondaryFullWidth) / 2)
-            f.y = screenRect.y
-            f.w = secondaryFullWidth
-            f.h = secondaryFullHeight
-        elseif f.x == math.floor(screenRect.x + (screenRect.w - secondaryFullWidth) / 2) and f.y == screenRect.y and f.w == secondaryFullWidth and f.h == secondaryFullHeight  then
-            f.x = math.floor(screenRect.x + (screenRect.w - secondaryFullWidth) / 2)
             f.y = math.floor(screenRect.y + (screenRect.h - secondaryFullHeight) / 2)
             f.w = secondaryFullWidth
             f.h = secondaryFullHeight
         elseif f.x == math.floor(screenRect.x + (screenRect.w - secondaryFullWidth) / 2) and f.y == math.floor(screenRect.y + (screenRect.h - secondaryFullHeight) / 2) and f.w == secondaryFullWidth and f.h == secondaryFullHeight  then
+            f.x = math.floor(screenRect.x + (screenRect.w - secondaryFullWidth) / 2)
+            f.y = screenRect.y
+            f.w = secondaryFullWidth
+            f.h = secondaryFullHeight
+        elseif f.x == math.floor(screenRect.x + (screenRect.w - secondaryFullWidth) / 2) and f.y == screenRect.y and f.w == secondaryFullWidth and f.h == secondaryFullHeight  then
             f.x = math.floor(screenRect.x + (screenRect.w - secondaryFullWidth) / 2)
             f.y = math.floor(screenRect.y + 2 * (screenRect.h - secondaryFullHeight) / 2)
             f.w = secondaryFullWidth
@@ -335,6 +335,7 @@ end)
 -- Mission Control keyboard shortcuts in SysPrefs > Keyboard > Shortcuts
 hs.hotkey.bind( hyper , 'c', function() hs.application.launchOrFocus('Google Chrome') end)
 hs.hotkey.bind( hyper , 'a', function() hs.application.launchOrFocus('Atom') end)
+hs.hotkey.bind( hyper , 'q', function() hs.application.launchOrFocus('Quiver') end)
 hs.hotkey.bind( hyper , 't', function() hs.application.launchOrFocus('iTerm') end)
 hs.hotkey.bind( hyper , 's', function() hs.application.launchOrFocus('Spotify') end)
 hs.hotkey.bind( hyper , 'e', function() hs.application.launchOrFocus('Evernote') end)
